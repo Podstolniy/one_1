@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+
+a = ("1", "2", "3", "4")
+
+def recursion(abcd):
+    if abcd:
+        a, *body = abcd
+        return {a: recursion(body)}
+    else:
+        return {}
+def main():
+    print(recursion(a))
+
+
+if __name__ == '__main__':
+    main()
