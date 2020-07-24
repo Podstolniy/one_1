@@ -4,14 +4,11 @@
 a = ("1", "2", "3", "4")
 
 def recursion(abcd):
-    if abcd:
-        a, *body = abcd
-        return {a: recursion(body)}
-    else:
-        return {}
+    b = list(map(lambda x: "{" + x, a)) + list("}" * len(a))
+    return (''.join(b))
+
 def main():
     print(recursion(a))
-
 
 if __name__ == '__main__':
     main()
